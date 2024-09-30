@@ -7,14 +7,28 @@ import About from './pages/About';
 
 const App = () => {
   const [activeLink, setActiveLink] = React.useState('home');
+  const [isDarkMode, setDarkMode] = React.useState(false);
+
+  // On page load, retrieve stored dark mode preference
+  React.useEffect(() => {
+    const storedDarkMode = localStorage.getItem('isDarkMode');
+    if (storedDarkMode !== null) {
+      setDarkMode(JSON.parse(storedDarkMode));
+    }
+  }, []);
+
+  const toggleDarkMode = (checked) => {
+    setDarkMode(checked);
+    localStorage.setItem('isDarkMode', JSON.stringify(checked)); 
+  };
 
 
 return (
   <>
   <BrowserRouter>
 
-    <Header activeLink={activeLink} setActiveLink={setActiveLink} />
-    
+    <Header isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode} activeLink={activeLink} setActiveLink={setActiveLink} />
+
     <Routes>
         <Route path="/home" element={<Home />} />
         <Route path="/about" element={<About />} />
