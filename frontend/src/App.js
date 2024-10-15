@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 
 import Header from './components/Header';
 import Home from './pages/Home'; 
+import Articles from './pages/Articles'; 
 import About from './pages/About'; 
 
 const App = () => {
@@ -31,6 +32,8 @@ return (
 
     <Routes>
         <Route path="/home" element={<Home />} />
+        <Route path="/articles" element={<Articles />} />
+        {/* <Route path="/articles/:id" element={<ArticleDetail />} /> */}
         <Route path="/about" element={<About />} />
         <Route path="*" element={<Navigate to="/home" />} />
     </Routes>

@@ -1,8 +1,9 @@
 import React from 'react';
 
+// Background Image
 import cyberpunkImage from '../images/cyberpunk3.jpg';
-import { fontWeight, letterSpacing, lineHeight } from '@mui/system';
 
+// Background Image
 const backgroundImage = {
   backgroundImage: `url(${cyberpunkImage})`,
   backgroundSize: 'cover',
@@ -10,7 +11,6 @@ const backgroundImage = {
   backgroundPosition: 'center',
   backgroundColor: '#4C3F91',
 };
-
 const ImageContainer = {
   position: 'absolute',
   width: '100vw',
@@ -19,46 +19,32 @@ const ImageContainer = {
   zIndex: -1,
 }
 
+// Styles the Div which contains all the content on centre page
 const ContentWrapperStyle = {
   position: 'absolute',
   top: '12.5vh',
   left: '15vw',
 
-  //borderLeft: '2px solid black',
-  //borderRight: '2px solid black',
-
-  height: '87.5vh',
+  height: '80vh',
   width: '70vw',
 
-  backgroundColor: '#B0C4DE',
+  backgroundColor: '#CDC1FF',
   color: '#444444',
 };
 
+// Styles the content (text) inside the main page (div)
 const ContentStyle = {
-
   position: 'relative',
-  top: '3.75%',
+  top: '0.25%',
   left: '2.5%',
   fontFamily: 'Lato, sans-serif',
-  
-  //height: '97.7vh',
-  //width: '90%',
-  
-  //backgroundColor: 'black',  
-  //color: 'white',
-
-  /*'@media (max-width: 1400px)': {
-    width: '60px'
-  },  
-  '@media (max-width: 800px)': {
-    width: '30px'
-  },*/
 };
 
 const HeadingStyle = {
   color: '#333333',
   fontSize: '1.75rem',
   fontWeight: 'bold',
+  marginBottom: '-4px',
 };
 
 const BodyTextStyle = {
@@ -83,13 +69,39 @@ const SignatureStyle = {
   display: 'block',          
 };
 
+// A line which seperates the two main pieces of text
+const SeparatorStyle = {
+  marginTop: '30px',
+  marginBottom: '30px',
+  border: 'none',
+  height: '2px',
+  backgroundColor: 'rgba(0, 0, 0, 0.2)',
+  width: '90%',
+  marginLeft: '2.5%',
+};
+
+const ReviewStyle = {
+  position: 'relative',
+  width: '92%',
+  left: '5px',
+
+  lineHeight: '1.3rem',
+  letterSpacing: '0.005rem',
+  marginBottom: '20px',
+
+  color: '#333333', 
+  fontSize: '1.1rem',
+  fontStyle: 'italic',
+  fontFamily: 'Roboto',
+};
+
 const Home = () => {
   return (
     <>
       <div style={ImageContainer} />
       <div style={ContentWrapperStyle}>
         <div style={ContentStyle}>
-          <h1 style={HeadingStyle}>Cyber Site: Navigating the Future of Cybersecurity</h1>
+          <h1 style={HeadingStyle}>Cyberhub: Navigating the Future of Cybersecurity</h1>
           <p style={BodyTextStyle}>
             A wise individual once said: "Knowledge is power." In the context of the 
             dynamic and vital field of cybersecurity, such words resonate with profound 
@@ -108,9 +120,27 @@ const Home = () => {
             like-minded individuals and enhance your skills. Together, we will 
             adeptly navigate the complexities and seize the opportunities that 
             define a secure digital future."
-
             <span style={SignatureStyle}>Signed, Nikita Ukladchikov<br/>CEO, Cyberhub</span>
           </p>
+
+          <hr style={SeparatorStyle} />
+
+          <div>
+            <h1 style={HeadingStyle}>Expert Testimony</h1>
+            <p style={ReviewStyle}>
+              "An absolutely essential product, there are simply no other alternatives currently on the market" <br/>
+              <em>- Forbes</em>
+            </p>
+            <p style={ReviewStyle}>
+              "[A]n extremely cost-effective and useful resource for any cybersecurity professional" <br/>
+              <em>- Wired</em>
+            </p>
+            <p style={ReviewStyle}>
+              "There's no other way to phrase it, Cyberhub is just a brilliant product all around the board" <br/>
+              <em>- TechRadar</em>
+            </p>
+          </div>
+
         </div>
       </div>
     </>

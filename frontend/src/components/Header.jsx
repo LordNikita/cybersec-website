@@ -32,6 +32,7 @@ const HeaderContentStyle = {
   left: '15%',
   height: '12.5vh',
   width: '70vw',
+  boxShadow: '0 2px 5px rgba(0, 0, 0, 0.5)',
 
   backgroundColor: '#4C3F91',
 };

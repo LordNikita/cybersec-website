@@ -1,17 +1,16 @@
 import React from 'react';
 
+// Background Image
 import cyberpunkImage from '../images/cyberpunk1.jpg';
 
-
+// Background Image
 const backgroundImage = {
   backgroundImage: `url(${cyberpunkImage})`,
   backgroundSize: 'cover',
   backgroundRepeat: 'no-repeat',
   backgroundPosition: 'center',
   backgroundColor: '#4C3F91',
-
 };
-
 const ImageContainer = {
   position: 'absolute',
   width: '100%',
@@ -20,19 +19,24 @@ const ImageContainer = {
   zIndex: -1,
 }
 
+// Styles the Div which contains all the content on centre page
 const ContentWrapperStyle = {
   position: 'absolute',
   top: '12.5vh',
-  left: '15vw',
+  left: '14.8vw',
+  
   width: '70vw',
+  height: '80vh',
 
-  backgroundColor: '#B0C4DE',
+  //backgroundColor: '#E5D9F2',
+  backgroundColor: '#E5D9F2',
   color: '#444444',
 };
 
+// Styles the content (text) inside the main page (div)
 const ContentStyle = {
   position: 'relative',
-  top: '1%',
+  top: '0.25%',
   left: '2.5%',
   fontFamily: 'Lato, sans-serif',
   
@@ -46,77 +50,56 @@ const HeadingStyle = {
 
 const BodyTextStyle = {
   position: 'relative',
-  width: '92%',
+  width: '85%',
   left: '5px',
 
   color: '#333333', 
   fontSize: '1.1rem',
-  lineHeight: '0.5rem',
+  lineHeight: '1.5rem',
   letterSpacing: '0.015rem',
 };
 
-const ListElementStyle = {
-  marginLeft: '-10px',
-  marginBottom: '5px'
-
-};
-
+//             This website has been designed and built by Nikita Ukladchikov for a 
+// UNSW course on Regulation of Cyber Security.
 const About = () => {
   return (
     <>
       <div style={ImageContainer} />
       <div style={ContentWrapperStyle}>
         <div style={ContentStyle}>
-          <h1 style={HeadingStyle}>Resume Overview </h1>
+          <h1 style={HeadingStyle}>About</h1>
           
-          <h3 style={BodyTextStyle}> Formal Education </h3>
-          <ul>
-            <li style={ListElementStyle}> UNSW Computer Science & Laws Undergrad Double Degree</li>
-          </ul>
+          <p style={BodyTextStyle}>
 
-          <h3 style={BodyTextStyle}> Languages </h3>
-          <ul>
-            <li style={ListElementStyle}> Fluent English </li>
-            <li style={ListElementStyle}> Fluent Russian </li>
-            <li style={ListElementStyle}> Basic Japanese (got some trophies on Duolingo) </li>
-          </ul>
-
-          <h3 style={BodyTextStyle}> Programming Languages </h3>
-          <ul>
-            <li style={ListElementStyle}> C </li>
-            <li style={ListElementStyle}> Python </li>
-            <li style={ListElementStyle}> Java </li>
-            <li style={ListElementStyle}> HTML & CSS </li>
-            <li style={ListElementStyle}> Javascript (+React) </li>
-          </ul>
-
-          <h3 style={BodyTextStyle}> Other Computer-based skills </h3>
-          <ul>
-            <li style={ListElementStyle}> Numerous completed software engineering projects (both backend & frontend) </li>
-            <li style={ListElementStyle}> Understanding of software engineering team practices (including Git) </li>
-            <li style={ListElementStyle}> Extensive experience using SQL (SQLite & PostgreSQL) </li>
-            <li style={ListElementStyle}> Familiar with big data & related tools (Hadoop, HDFS, YARN, HBase, Spark etc.) </li>
-            <li style={ListElementStyle}> Basic hands-on experience with 3d modelling </li>
-            <li style={ListElementStyle}> Impressive video editing skills (have previously made Call of Duty montages for my YouTube channel) </li>
-          </ul>          
-
-          <h3 style={BodyTextStyle}> Hobbies </h3>
-          <ul>
-            <li style={ListElementStyle}> Long distance running </li>
-            <li style={ListElementStyle}> Yoga </li>
-            <li style={ListElementStyle}> Art (film, music, tv shows, video games) </li>
-            <li style={ListElementStyle}> Complaining </li>            
-            <li style={ListElementStyle}> Programming & Coding </li>
-          </ul>       
-
-          <h3 style={BodyTextStyle}> Life Goals </h3>
-          <ul>
-            <li style={ListElementStyle}> I want to be a house husband who 
-              watches the kids while my wife works
-            </li>
-            <li style={ListElementStyle}> Also want to unbox a knife in Counter-Strike 2 </li>   
-            <li style={ListElementStyle}> One threesome before I die as well </li>          
-          </ul>                
+          The content and materials provided on Cyberhub are intended solely 
+          for educational and informational purposes and reflect the personal 
+          views and interpretations of the author. Cyberhub does not, under 
+          any circumstances, provide or constitute professional, legal, 
+          financial, or cybersecurity advice in any capacity or in any jurisdiction. 
+          <br/>
+          <br/>
+          No part of the information provided herein should be construed as 
+          establishing any legal obligations, fiduciary relationships, 
+          contractual relationships, solicitor-client relationships, or 
+          agent-principal relationships. The author expressly disclaims any 
+          liability for actions taken based on the content of this website, 
+          and users are encouraged to seek professional guidance tailored to 
+          their individual circumstances. 
+          <br/>
+          <br/>
+          While efforts are made to ensure the accuracy of information, 
+          the author assumes no responsibility for any errors, omissions, or 
+          reliance on any material on Cyberhub. The use of Cyberhub and 
+          its content is at the user's own risk, and neither the author nor any 
+          affiliated parties will be held liable for any direct, indirect, or 
+          consequential damages arising from its use.
+          <br/>
+          <br/>
+          <br/>
+          <strong>All content on this website is the intellectual property of Nikita Ukladchikov. 
+          Unauthorized use or reproduction of this material is strictly 
+          prohibited. © 2024 Nikita Ukladchikov. All rights reserved.</strong>
+        </p>
 
         </div>
 

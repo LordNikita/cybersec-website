@@ -1,0 +1,37 @@
+.rain {
+    position: fixed;
+    top: -50px;
+    left: -50px;
+    width: 110%;
+    height: 110%;
+    z-index: 0;
+    pointer-events: none;
+    animation: sway 5s infinite alternate;
+
+    filter: brightness(3) saturate(0.3) ;
+}
+  
+@keyframes sway {
+  0% {
+    transform: translateX(2px) rotate(-3deg) scale(1.025);
+  }
+  50% {
+    transform: translateX(-2px) rotate(3deg) scale(0.975);
+  }
+  100% {
+    transform: translateX(0) rotate(0deg) scale(1);
+  }
+}
+
+
+@keyframes backgroundWane {
+  0% {
+    background-color: rgba(205, 193, 255, 0.0); /* 5% opacity */
+  }
+  50% {
+    background-color: rgba(205, 193, 255, 0.2); /* 15% opacity */
+  }
+  100% {
+    background-color: rgba(205, 193, 255, 0.0); /* back to 5% opacity */
+  }
+}  
