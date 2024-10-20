@@ -75,7 +75,7 @@
       "* [Cyber.gov.au - Phishing](https://www.cyber.gov.au/threats/types-threats/phishing)",
       "* [UpGuard - Types of Phishing Attacks](https://www.upguard.com/blog/types-of-phishing-attacks)"
     ],
-    "tags": ["Psychology", "Scams", "Social Engineering"]
+    "tags": ["Psychology", "Scam", "Social Engineering"]
   },
   {
     "id": 2,
@@ -96,11 +96,192 @@
     ],
     "sources": [
       "## Further Reading",
-      "* [Cloudflare - Phishing Attack](https://www.cloudflare.com/en-au/learning/access-management/phishing-attack/)",
-      "* [Phishing.org - What is Phishing?](https://www.phishing.org/what-is-phishing)",
-      "* [Cyber.gov.au - Phishing](https://www.cyber.gov.au/threats/types-threats/phishing)",
-      "* [UpGuard - Types of Phishing Attacks](https://www.upguard.com/blog/types-of-phishing-attacks)"
+      "* [abcd](https://www.cloudflare.com/en-au/learning/access-management/phishing-attack/)"
     ],    
-    "tags": ["Psychology", "Scams", "Social Engineering"]
+    "tags": ["Psychology", "Scam", "Social Engineering"]
+  },
+  {
+    "id": 3,
+    "title": "Understanding Malware: Beyond the Basics",
+    "content": [
+      "Line 1", 
+      "Line 2", 
+      "Line 3",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      ""
+    ],
+    "sources": [
+      "## Further Reading",
+      "* [abcd](https://www.cloudflare.com/en-au/learning/access-management/phishing-attack/)"
+    ],    
+    "tags": ["Online Safety", "Cybersecurity", "Privacy", "Scam"]
+  },
+  {
+    "id": 4,
+    "title": "Hacked in Transit",
+    "content": [
+      "Line 1", 
+      "Line 2", 
+      "Line 3",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      ""
+    ],
+    "sources": [
+      "## Further Reading",
+      "* [abcd](https://www.cloudflare.com/en-au/learning/access-management/phishing-attack/)"
+    ],    
+    "tags": ["Online Safety", "Cybersecurity", "Privacy"]
+  },
+  {
+    "id": 5,
+    "title": "Zero Trust Architecture",
+    "content": [
+      "Line 1", 
+      "Line 2", 
+      "Line 3",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      ""
+    ],
+    "sources": [
+      "## Further Reading",
+      "* [abcd](https://www.cloudflare.com/en-au/learning/access-management/phishing-attack/)"
+    ],    
+    "tags": ["Cybersecurity", "Privacy"]
+  },
+  {
+    "id": 6,
+    "title": "The Psychology Behind Passwords",
+    "content": [
+      "Line 1", 
+      "Line 2", 
+      "Line 3",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      ""
+    ],
+    "sources": [
+      "## Further Reading",
+      "* [abcd](https://www.cloudflare.com/en-au/learning/access-management/phishing-attack/)"
+    ],    
+    "tags": ["Cybersecurity", "Online Safety", "Psychology"]
+  },
+  {
+    "id": 7,
+    "title": "Cyber Warfare: Chaos or Opportunity?",
+    "content": [
+      "Line 1", 
+      "Line 2", 
+      "Line 3",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      ""
+    ],
+    "sources": [
+      "## Further Reading",
+      "* [abcd](https://www.cloudflare.com/en-au/learning/access-management/phishing-attack/)"
+    ],    
+    "tags": ["Cybersecurity", "Privacy"]
+  },
+  {
+    "id": 8,
+    "title": "IoT & Cybersecurity",
+    "content": [
+      "Line 1", 
+      "Line 2", 
+      "Line 3",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      ""
+    ],
+    "sources": [
+      "## Further Reading",
+      "* [abcd](https://www.cloudflare.com/en-au/learning/access-management/phishing-attack/)"
+    ],    
+    "tags": ["Cybersecurity", "Privacy", "Technology"]
+  },
+  {
+    "id": 9,
+    "title": "Ethical Hacking: An Intriguing Moral Dilemma",
+    "content": [
+      "Line 1", 
+      "Line 2", 
+      "Line 3",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      ""
+    ],
+    "sources": [
+      "## Further Reading",
+      "* [abcd](https://www.cloudflare.com/en-au/learning/access-management/phishing-attack/)"
+    ],    
+    "tags": ["Cybersecurity", "Privacy"]
+  },
+  {
+    "id": 10,
+    "title": "The Role of AI in Cybersecurity",
+    "content": [
+      "Line 1", 
+      "Line 2", 
+      "Line 3",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      ""
+    ],
+    "sources": [
+      "## Further Reading",
+      "* [abcd](https://www.cloudflare.com/en-au/learning/access-management/phishing-attack/)"
+    ],    
+    "tags": ["AI", "Cybersecurity", "Technology"]
   }
 ]

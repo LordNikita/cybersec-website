@@ -119,7 +119,7 @@ const Header = (props) => {
     // To improve UX experience, we ensure that a user clicking on the random
     // article does not get redirected to the article he is already on
     do {
-      articleNum = getRandomArticleNumber(2);
+      articleNum = getRandomArticleNumber(10);
     } while (articleNum === currentArticleNum); 
   
     return `/article/${articleNum}`;

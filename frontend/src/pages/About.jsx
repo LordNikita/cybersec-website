@@ -29,6 +29,8 @@ const ContentWrapperStyle = {
   height: '80vh',
 
   backgroundColor: '#E5D9F2',
+  //backgroundColor: '#CDC1FF',
+  
   //color: '#444444',
   color: '#333333',
 };

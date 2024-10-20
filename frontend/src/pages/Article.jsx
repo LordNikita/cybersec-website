@@ -65,7 +65,7 @@ const Article = () => {
           <h1>{article.title}</h1>
           <ReactMarkdown>{formattedContent}</ReactMarkdown>
           <ReactMarkdown>{formattedSources}</ReactMarkdown>
-          <span> Tags: {article.tags.map(tag => `[${tag}]`).join(' ')} </span>
+          <span> Article Tags: {article.tags.map(tag => `[${tag}]`).join(' ')} </span>
 
         </div>
       </div>

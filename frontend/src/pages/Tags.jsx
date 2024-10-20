@@ -1,56 +1,47 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import '../styles/Tags.css';
+import articles from '../data/articles.json';
 
 // Background Image
 //import cyberpunkImage from '../images/cyberpunk9.jpg';
 
-// Styles the Div which contains all the content on centre page
-const ContentWrapperStyle = {
+const TagStyle = {
   position: 'absolute',
-  top: '12.5vh',
-  left: '14.8vw',
+  top: '15%',
+  left: '17.6%',
+  width: '25%',
 
-  //height: '2200px',
-  width: '70vw',
-  paddingBottom: '25px',
-
-  color: '#444444',
+  textAlign: 'center',
+  lineHeight: '1.65rem',
+  fontSize: '1.4rem',
+  fontFamily: 'Roboto, sans-serif',
+  color: '#f0e9df',
+  //backgroundColor: 'rgba(255, 0, 0, 0.25)',
+  textShadow: '0 0 5px rgba(0, 0, 0, 0.7), 0 0 15px rgba(255, 255, 255, 0.5)',
 };
 
-// Styles the content (text) inside the main page (div)
-const ContentStyle = {
-  position: 'relative',
-  top: '0.25%',
-  left: '2.5%',
-  width: '94%',
+const ArticleStyle = {
+  position: 'absolute',
+  top: '15%',
+  right: '15.5%',
+  width: '35%',
 
-  lineHeight: '1.3rem',
-  fontFamily: 'Lato, sans-serif',
+  textAlign: 'right',
+  lineHeight: '1.5rem',
+  fontSize: '1.2rem',
+  fontFamily: 'merriweather',
+  color: '#dfe1f0', 
+  //backgroundColor: 'rgba(255, 0, 0, 0.25)',
+  //textShadow: '0 0 5px rgba(255, 255, 255, 0.8), 0 0 10px rgba(255, 255, 255, 0.6)',
+  textShadow: '0 0 7.5px rgba(255, 255, 255, 0.75)',
 };
 
-const allTags = [
-  'Online Safety',
-  'Psychology',
-  'Scams',
-  'Social Engineering',
-  'Cybersecurity',
-  'Privacy',
-  'Technology',
-  'AI',
-];
+const HeadingStyle = {
+  fontSize: '1.7rem',
+};
 
-const articles = [
-  { id: 1, title: 'Phishing: Tactics Unveiled', tags: ['Online Safety', 'Psychology', 'Scams', 'Social Engineering'] },
-  { id: 2, title: 'Security & Romance', tags: ['Psychology', 'Scams', 'Social Engineering'] },
-  { id: 3, title: 'Understanding Malware: Beyond the Basics', tags: ['Online Safety', 'Cybersecurity', 'Privacy', 'Scams'] },
-  { id: 4, title: 'Hacked in Transit', tags: ['Online Safety', 'Cybersecurity', 'Privacy'] },
-  { id: 5, title: 'Zero Trust Architecture', tags: ['Cybersecurity', 'Privacy'] },
-  { id: 6, title: 'The Psychology Behind Passwords', tags: ['Cybersecurity', 'Online Safety', 'Psychology'] },
-  { id: 7, title: 'Cyber Warfare: Chaos or Opportunity?', tags: ['Cybersecurity', 'Privacy'] },
-  { id: 8, title: 'IoT & Cybersecurity', tags: ['Cybersecurity', 'Privacy', 'Technology'] },
-  { id: 9, title: 'Ethical Hacking: An Intriguing Moral Dilemma', tags: ['Cybersecurity', 'Privacy'] },
-  { id: 10, title: 'The Role of AI in Cybersecurity', tags: ['AI', 'Cybersecurity', 'Technology'] },
+const allTags = ['All', 'Online Safety', 'Psychology', 'Scam', 'Social Engineering', 'Cybersecurity', 'Privacy', 'Technology', 'AI',
 ];
 
 const Tags = () => {
@@ -58,39 +49,35 @@ const Tags = () => {
   const navigate = useNavigate();
 
   const handleTagClick = (tag) => {
-    setSelectedTag(tag);
+    setSelectedTag(tag === 'All' ? null : tag);
   };
 
-  const filteredArticles = selectedTag
-    ? articles.filter(article => article.tags.includes(selectedTag))
-    : articles;
+  const filteredArticles = selectedTag ? articles.filter(article => article.tags.includes(selectedTag)): articles;
 
   return (
     <>
       <div className="big-woman" />
       <div className="big-woman-overlay" />
 
-      <div style={ContentWrapperStyle}>
-        <div style={ContentStyle}>
-          <div>
-            <h2>Select a Tag:</h2>
-            <ul>
+
+          <div style={TagStyle}>
+            <h2 style={HeadingStyle}>✦ Select a Tag ✦</h2>
+            <div>
               {allTags.map(tag => (
-                <li key={tag} onClick={() => handleTagClick(tag)} style={{ cursor: 'pointer' }}>{tag}</li>
+                <p key={tag} onClick={() => handleTagClick(tag)} style={{ cursor: 'pointer' }}>{tag}</p>
               ))}
-            </ul>
+            </div>
           </div>
 
-          <h2>Articles for Tag: {selectedTag || 'All'}</h2>
-          <div>
+
+          <div style = {ArticleStyle}>
+            <h2>★ {selectedTag || 'All'}  Articles ★</h2>
             {filteredArticles.map(article => (
               <div key={article.id} onClick={() => navigate(`/article/${article.id}`)} style={{ cursor: 'pointer' }}>
-                <h3>{article.title}</h3>
+                <p>{article.title}</p>
               </div>
             ))}
           </div>
-        </div>  
-      </div> 
     </>
   );
 };
