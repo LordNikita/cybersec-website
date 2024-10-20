@@ -4,7 +4,9 @@ import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import Header from './components/Header';
 import Home from './pages/Home'; 
 import Articles from './pages/Articles'; 
+import Article from './pages/Article';
 import About from './pages/About'; 
+import Tags from './pages/Tags';
 
 const App = () => {
   const [activeLink, setActiveLink] = React.useState('home');
@@ -33,7 +35,8 @@ return (
     <Routes>
         <Route path="/home" element={<Home />} />
         <Route path="/articles" element={<Articles />} />
-        {/* <Route path="/articles/:id" element={<ArticleDetail />} /> */}
+        <Route path="/article/:id" element={<Article />} />
+        <Route path="/tags" element={<Tags />} />
         <Route path="/about" element={<About />} />
         <Route path="*" element={<Navigate to="/home" />} />
     </Routes>

@@ -12,7 +12,7 @@ const backgroundImage = {
   backgroundColor: '#4C3F91',
 };
 const ImageContainer = {
-  position: 'absolute',
+  position: 'fixed',
   width: '100%',
   height: '1000px',
   ...backgroundImage,  
@@ -23,14 +23,14 @@ const ImageContainer = {
 const ContentWrapperStyle = {
   position: 'absolute',
   top: '12.5vh',
-  left: '14.8vw',
+  left: '15vw',
   
   width: '70vw',
   height: '80vh',
 
-  //backgroundColor: '#E5D9F2',
   backgroundColor: '#E5D9F2',
-  color: '#444444',
+  //color: '#444444',
+  color: '#333333',
 };
 
 // Styles the content (text) inside the main page (div)
@@ -43,7 +43,9 @@ const ContentStyle = {
 };
 
 const HeadingStyle = {
-  color: '#333333',
+  position: 'relative',
+  left: '0.5%',
+
   fontSize: '1.75rem',
   fontWeight: 'bold',
 };
@@ -53,7 +55,6 @@ const BodyTextStyle = {
   width: '85%',
   left: '5px',
 
-  color: '#333333', 
   fontSize: '1.1rem',
   lineHeight: '1.5rem',
   letterSpacing: '0.015rem',

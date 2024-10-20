@@ -15,9 +15,9 @@ const ButtonStyle = {
 
 
 const ArticleButton = (props) => {
-  const { label, navigateTo  } = props;
+  const { label, onClick } = props;
   return (
-    <Button variant="outlined" color="primary" onClick={navigateTo} endIcon={<ArrowForwardIcon />} sx={ButtonStyle}>
+    <Button variant="outlined" color="primary" onClick={onClick} endIcon={<ArrowForwardIcon />} sx={ButtonStyle}>
       {label}
     </Button>
   );

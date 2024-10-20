@@ -1,5 +1,6 @@
 import React from 'react';
-import { Link as RouterLink, useLocation } from 'react-router-dom';
+import { Link as RouterLink, useLocation, useNavigate } from 'react-router-dom';
+import { getRandomArticleNumber } from '../utils/helpers.js'; 
 
 // Materials UI imports
 import { Avatar, Box, Link, Stack, Typography } from '@mui/material';
@@ -103,14 +104,26 @@ const DarkModeWrapper = {
 
 const Header = (props) => {
   const { activeLink, setActiveLink, isDarkMode, toggleDarkMode } = props;
-
   const location = useLocation();
+
 
   React.useEffect(() => {
     const currentPath = location.pathname.split('/')[1];
     setActiveLink(currentPath);
-    console.log(currentPath);
   }, [location.pathname]);
+
+  const handleRandomArticleClick = () => {
+    const currentArticleNum = parseInt(location.pathname.split('/').pop());
+    let articleNum;
+    
+    // To improve UX experience, we ensure that a user clicking on the random
+    // article does not get redirected to the article he is already on
+    do {
+      articleNum = getRandomArticleNumber(2);
+    } while (articleNum === currentArticleNum); 
+  
+    return `/article/${articleNum}`;
+  };
 
   return (
     <div style={HeaderWrapperStyle}>
@@ -151,7 +164,7 @@ const Header = (props) => {
           </Box>
 
           <Box sx={activeLink === 'none' ? ActiveLinkWrapperLarge : LinkWrapperLarge}>
-            <RouterLink to="/random" style={{ textDecoration: 'none' }}>
+            <RouterLink to={handleRandomArticleClick()} style={{ textDecoration: 'none' }}>
               <Link sx={LinkStyle}>
                 Random Article
               </Link>

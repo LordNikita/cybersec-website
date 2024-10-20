@@ -1,0 +1,83 @@
+.big-woman {
+  position: fixed;
+  width: 102%;
+  height: 102%;
+  top: -10px;
+  left: -10px;
+  z-index: -1;
+
+  background-image: url('../images/cyberpunk9.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #4C3F91;
+  animation: pulse 10s infinite, fade 5s infinite, wobble 10s infinite;
+}
+
+
+.big-woman-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+
+  background-color: rgba(255, 20, 147, 0.5); /* Your chosen overlay color */
+  animation: vibrant 2.5s infinite alternate;
+}
+
+/* Pulse */
+@keyframes pulse {
+  0% {
+      transform: scale(1);
+  }
+  50% {
+      transform: scale(1.035);
+  }
+  100% {
+      transform: scale(1);
+  }
+}
+
+/* Fade */
+@keyframes fade {
+  0% {
+      opacity: 1;
+  }
+  50% {
+      opacity: 0.92;
+  }
+  100% {
+      opacity: 1;
+  }
+}
+
+/* Overlay Colour */
+@keyframes vibrant {
+  0% {
+    opacity: 0.1;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
+
+/* Wobble */
+@keyframes wobble {
+  0% {
+      transform: rotate(0deg);
+  }
+  25% {
+      transform: rotate(0.15deg);
+  }
+  50% {
+      transform: rotate(-0.15deg);
+  }
+  75% {
+      transform: rotate(0.15deg);
+  }
+  100% {
+      transform: rotate(0deg);
+  }
+}
