@@ -4,7 +4,7 @@ import { getRandomArticleNumber } from '../utils/helpers.js';
 
 // Materials UI imports
 import { Avatar, Box, Link, Stack, Typography } from '@mui/material';
-import { fontWeight } from '@mui/system';
+import { fontWeight, letterSpacing } from '@mui/system';
 import { DarkModeSwitch } from 'react-toggle-dark-mode';
 
 const HeaderWrapperStyle = {
@@ -15,39 +15,39 @@ const HeaderWrapperStyle = {
   height: '12.5vh',
   width: '100vw',
   zIndex: 10,
-
-  /*'@media (max-width: 1400px)': {
-    width: 'calc(100vw - 60px)',
-  },  
-  '@media (max-width: 800px)': {
-    width: 'calc(100vw - 30px)',
-  },*/
-};
-
-const HeaderContentStyle = {
-  position: 'fixed',
-  display: 'flex', 
-  flexDirection: 'column',
-  justifyContent: 'space-between',
-
-  left: '15%',
-  height: '12.5vh',
-  width: '70vw',
-  boxShadow: '0 2px 5px rgba(0, 0, 0, 0.5)',
-
-  backgroundColor: '#4C3F91',
 };
 
 const WebsiteNameStyle = {
   position: 'relative',
-  top: '13.75%',
+  top: '15%',
   left: '3.5%',
 
-  fontSize: '2rem',
-  fontFamily: 'Lato, sans-serif',
-  //fontWeight: 'bold',
-  color: '#FFFFFF'
+  fontSize: '2.35rem',
+  fontFamily: 'Lato',
+  color: '#FFFFFF',
+  letterSpacing: '0.1rem',
 
+  textShadow: '1px 1px 10px rgba(0, 0, 0, 0.3)',
+};
+
+const TitleFirstStyle = {
+  display: 'inline-block',
+  fontFamily: 'Arial',
+  fontWeight: 'bold',
+  letterSpacing: '-0.05rem',
+};
+
+const TitleSecondStyle = {
+  fontFamily: 'Arial',
+  fontWeight: 'bold',
+  background: '#FF9900',
+  color: '#000000',
+
+  borderRradius: '2vw',
+  padding: '0 5px 5px 5px',
+  borderRadius: '4px',
+  letterSpacing: '-0.05rem',
+  marginLeft: '5px',
 };
 
 const LinksStackStyle = {
@@ -57,7 +57,7 @@ const LinksStackStyle = {
   left: '2.5%',
   bottom: '7.5%',
   fontSize: '1.15rem',
-
+  letterSpacing: '0.04rem'
 };
 
 const LinkWrapper = {
@@ -92,20 +92,18 @@ const ActiveLinkWrapperLarge = {
 const LinkStyle = {
   color: '#FFFFFF',
   textDecoration: 'none',
-
 };
 
 const DarkModeWrapper = {
   position: 'absolute',
   right: '2%',
-  top: '18%',
+  top: '24%',
 
 };
 
 const Header = (props) => {
   const { activeLink, setActiveLink, isDarkMode, toggleDarkMode } = props;
   const location = useLocation();
-
 
   React.useEffect(() => {
     const currentPath = location.pathname.split('/')[1];
@@ -125,12 +123,38 @@ const Header = (props) => {
     return `/article/${articleNum}`;
   };
 
+  const isTagsPath = location.pathname === '/tags';
+  const HeaderContentStyle = {
+    position: 'fixed',
+    display: 'flex', 
+    flexDirection: 'column',
+    justifyContent: 'space-between',
+  
+    left: '15%',
+    height: '15vh',
+    width: '70vw',
+    boxShadow: '0 2px 5px rgba(0, 0, 0, 0.5)',
+  
+
+    backgroundColor: isTagsPath ? 'transparent' : (isDarkMode ? '#1B1B1B' : '#4C3F91'),
+
+    border: isTagsPath ? '0.5px solid white' : 'none',
+    borderTop: 'none',
+  };  
+
   return (
     <div style={HeaderWrapperStyle}>
       <Box sx={HeaderContentStyle}>
 
         <Typography variant="h6" sx={ WebsiteNameStyle }>
-          Cyber Site
+          {isDarkMode ? (
+            <>
+              <span style={TitleFirstStyle}>Cyber</span>
+              <span style={TitleSecondStyle}>hub</span>
+            </>
+          ) : (
+          <>Cyberhub</>
+          )}
         </Typography>
 
         <div style={DarkModeWrapper}>

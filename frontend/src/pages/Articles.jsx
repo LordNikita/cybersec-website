@@ -50,7 +50,7 @@ const ImageContainer = {
 // Styles the Div which contains all the content on centre page
 const ContentWrapperStyle = {
   position: 'absolute',
-  top: '12.5vh',
+  top: '15vh',
   left: '15vw',
 
   height: '80vh',
@@ -147,13 +147,10 @@ const ArticleButtonWrapper = {
 const ButtonContainerStyle = {
   position: 'fixed',
   display: 'flex',
-  //justifyContent: 'space-between', 
-  //alignItems: 'center', 
 
-  bottom: '70px',
+  bottom: '50px',
   height: '50px',
 
-  //backgroundColor: 'black',
 };
 
 const articles = [

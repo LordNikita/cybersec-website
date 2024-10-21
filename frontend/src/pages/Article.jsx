@@ -5,6 +5,7 @@ import ReactMarkdown from 'react-markdown';
 
 // Background Image
 import cyberpunkImage from '../images/cyberpunk6.jpg';
+import { letterSpacing } from '@mui/system';
 
 // Background Image
 const backgroundImage = {
@@ -25,7 +26,7 @@ const ImageContainer = {
 // Styles the Div which contains all the content on centre page
 const ContentWrapperStyle = {
   position: 'absolute',
-  top: '12.5vh',
+  top: '15vh',
   left: '14.8vw',
 
   //height: '2200px',
@@ -43,7 +44,8 @@ const ContentStyle = {
   left: '2.5%',
   width: '94%',
 
-  lineHeight: '1.3rem',
+  lineHeight: '1.4rem',
+  letterSpacing: '0.0075rem',
   fontFamily: 'Lato, sans-serif',
 };
 

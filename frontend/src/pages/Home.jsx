@@ -22,7 +22,7 @@ const ImageContainer = {
 // Styles the Div which contains all the content on centre page
 const ContentWrapperStyle = {
   position: 'absolute',
-  top: '12.5vh',
+  top: '15vh',
   left: '15vw',
 
   height: '80vh',
