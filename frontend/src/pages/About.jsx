@@ -14,7 +14,7 @@ const backgroundImage = {
 const ImageContainer = {
   position: 'fixed',
   width: '100%',
-  height: '1000px',
+  height: '100vh',
   ...backgroundImage,  
   zIndex: -1,
 }
@@ -24,9 +24,8 @@ const ContentWrapperStyle = {
   position: 'absolute',
   top: '15vh',
   left: '15vw',
-  
   width: '70vw',
-  height: '80vh',
+  paddingBottom: '10px',
 
   backgroundColor: '#E5D9F2',
   //backgroundColor: '#CDC1FF',
@@ -61,6 +60,10 @@ const BodyTextStyle = {
   lineHeight: '1.5rem',
   letterSpacing: '0.015rem',
 };
+
+const contactStyle = {
+  letterSpacing: '0.025rem',
+}
 
 //             This website has been designed and built by Nikita Ukladchikov for a 
 // UNSW course on Regulation of Cyber Security.
@@ -102,6 +105,17 @@ const About = () => {
           <strong>All content on this website is the intellectual property of Nikita Ukladchikov. 
           Unauthorized use or reproduction of this material is strictly 
           prohibited. © 2024 Nikita Ukladchikov. All rights reserved.</strong>
+
+          <br/>
+          <br/>
+          <br/>
+          Contact Details:
+          <ul style={contactStyle}>
+            <li>Email: nikita.uklad@gmail.com</li>
+            <li>Phone: 0403 791 908</li>
+            <li>Linkedin: https://steamcommunity.com/id/Source_Weed_Maker123/</li>
+          </ul>
+
         </p>
 
         </div>

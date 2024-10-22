@@ -13,8 +13,8 @@ const backgroundImage = {
 };
 const ImageContainer = {
   position: 'absolute',
-  width: '100vw',
-  height: '100vh',
+  width: '100%',
+  height: '100%',
   ...backgroundImage,  
   zIndex: -1,
 }
@@ -25,8 +25,8 @@ const ContentWrapperStyle = {
   top: '15vh',
   left: '15vw',
 
-  height: '80vh',
   width: '70vw',
+  paddingBottom: '10px',
 
   backgroundColor: '#CDC1FF',
   color: '#444444',

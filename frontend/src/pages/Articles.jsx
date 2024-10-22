@@ -148,7 +148,7 @@ const ButtonContainerStyle = {
   position: 'fixed',
   display: 'flex',
 
-  bottom: '50px',
+  bottom: '2.5%',
   height: '50px',
 
 };

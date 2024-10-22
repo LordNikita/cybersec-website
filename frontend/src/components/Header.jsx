@@ -1,10 +1,11 @@
 import React from 'react';
 import { Link as RouterLink, useLocation, useNavigate } from 'react-router-dom';
 import { getRandomArticleNumber } from '../utils/helpers.js'; 
+import GlitchTitle from './GlitchTitle.jsx';
 
 // Materials UI imports
 import { Avatar, Box, Link, Stack, Typography } from '@mui/material';
-import { fontWeight, letterSpacing } from '@mui/system';
+import { fontFamily, fontWeight, letterSpacing } from '@mui/system';
 import { DarkModeSwitch } from 'react-toggle-dark-mode';
 
 const HeaderWrapperStyle = {
@@ -21,33 +22,30 @@ const WebsiteNameStyle = {
   position: 'relative',
   top: '15%',
   left: '3.5%',
-
-  fontSize: '2.35rem',
-  fontFamily: 'Lato',
-  color: '#FFFFFF',
-  letterSpacing: '0.1rem',
-
-  textShadow: '1px 1px 10px rgba(0, 0, 0, 0.3)',
 };
-
 const TitleFirstStyle = {
   display: 'inline-block',
   fontFamily: 'Arial',
   fontWeight: 'bold',
   letterSpacing: '-0.05rem',
-};
+  color: '#FFFFFF',
 
+  fontSize: '2.35rem',
+  fontFamily: 'Lato',
+};
 const TitleSecondStyle = {
   fontFamily: 'Arial',
   fontWeight: 'bold',
   background: '#FF9900',
   color: '#000000',
 
-  borderRradius: '2vw',
   padding: '0 5px 5px 5px',
   borderRadius: '4px',
   letterSpacing: '-0.05rem',
   marginLeft: '5px',
+
+  fontSize: '2.35rem',
+  fontFamily: 'Lato',
 };
 
 const LinksStackStyle = {
@@ -92,6 +90,7 @@ const ActiveLinkWrapperLarge = {
 const LinkStyle = {
   color: '#FFFFFF',
   textDecoration: 'none',
+  fontFamily: 'Lato',
 };
 
 const DarkModeWrapper = {
@@ -146,14 +145,14 @@ const Header = (props) => {
     <div style={HeaderWrapperStyle}>
       <Box sx={HeaderContentStyle}>
 
-        <Typography variant="h6" sx={ WebsiteNameStyle }>
+        <Typography variant="h6" sx={WebsiteNameStyle}>
           {isDarkMode ? (
             <>
               <span style={TitleFirstStyle}>Cyber</span>
               <span style={TitleSecondStyle}>hub</span>
             </>
           ) : (
-          <>Cyberhub</>
+          <><GlitchTitle/></>
           )}
         </Typography>
 

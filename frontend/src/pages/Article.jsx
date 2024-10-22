@@ -27,7 +27,7 @@ const ImageContainer = {
 const ContentWrapperStyle = {
   position: 'absolute',
   top: '15vh',
-  left: '14.8vw',
+  left: '15%',
 
   //height: '2200px',
   width: '70vw',
@@ -49,6 +49,17 @@ const ContentStyle = {
   fontFamily: 'Lato, sans-serif',
 };
 
+const customImageStyle = {
+  maxWidth: '50%',
+  marginTop: '2%',
+  marginBottom: '2%',
+  objectFit: 'contain',
+
+
+
+  borderRadius: '10px',
+  border: '2px solid #FFA500'
+};
 
 const Article = () => {
   const { id } = useParams();
@@ -65,7 +76,9 @@ const Article = () => {
       <div style={ContentWrapperStyle}>
         <div style={ContentStyle}>
           <h1>{article.title}</h1>
-          <ReactMarkdown>{formattedContent}</ReactMarkdown>
+          <ReactMarkdown components={{ img: ({node, ...props}) => <img style={customImageStyle} {...props} />}}>
+            {formattedContent}
+          </ReactMarkdown>
           <ReactMarkdown>{formattedSources}</ReactMarkdown>
           <span> Article Tags: {article.tags.map(tag => `[${tag}]`).join(' ')} </span>
 

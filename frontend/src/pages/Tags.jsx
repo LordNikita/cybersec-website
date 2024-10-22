@@ -9,7 +9,8 @@ import articles from '../data/articles.json';
 const TagStyle = {
   position: 'absolute',
   top: '15%',
-  left: '17.6%',
+  left: '19.7%',
+  //left: '12.6%',
   width: '25%',
 
   textAlign: 'center',
