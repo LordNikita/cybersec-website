@@ -28,3 +28,10 @@ Make sure you have the following installed on your system:
      2. After starting the server, the website should automatically open in your browser.
      3. If it doesn't, copy and paste this URL into your browser (Google Chrome, Firefox etc.):
      4. `http://localhost:3000`
+    
+## Project Limitations
+The project has some limitations. 
+
+Firstly, the **recommended viewport/monitor resolution to view the website is 1920x1080 pixels**. It would take marginal work to increase the responsiveness such that the website would look great on smaller laptops screens. It would take a little bit more effort to make it good look on a mobile screen. But I only had so much time I could spend on this project during the term.
+
+Secondly, the website is frontend only and doesn't have a backend. This was a conscious design decision. Building a backend and populating it with data was just way too inefficient and time-costly for what I had to build in the amount of time I had. 
