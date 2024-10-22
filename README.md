@@ -13,27 +13,27 @@ Make sure you have the following installed on your system:
 
 ### Steps to Run the Project
 
-1. **Clone the Repository**
+  1. **Clone the Repository**
 
 Clone the project repository to your local machine.
 
-2. **Navigate to the Project Folder**
+  2. **Navigate to the Project Folder**
 
 Move into the project directory where the frontend is stored
 
-3. **Install Dependencies**
+  3. **Install Dependencies**
 
 Run the following command to install the required npm packages
 
-4. **Compile SCSS**
+  4. **Compile SCSS**
 
-5. **Start the frontend Server**
+  5. **Start the frontend Server**
 
-To run the website locally, use the following command:
+  To run the website locally, use the following command:
   `npm start`
 
-6. **Open the website**
+  6. **Open the website**
 
-After starting the server, the website should automatically open in your browser. If it doesn't, copy and paste this URL into your browser (Google Chrome, Firefox etc.)
+  After starting the server, the website should automatically open in your browser. If it doesn't, copy and paste this URL into your browser (Google Chrome, Firefox etc.)
   `http://localhost:3000`
   
