@@ -11,19 +11,20 @@ Make sure you have the following installed on your system:
 - Node.js
 - NPM (Node Package Manager)
 
-### Steps to Run the Project
+### Steps to Run the Project (on Mac)
 
-  1. **Clone the Repository**
+  1. 1. **Clone the Repository**
+     2. Type 'git clone <repository-url>' in your preferred terminal
+  2. 1. **Navigate to the Project Folder**
+     2. Move into the project directory where the frontend is stored
+     3. Type 'cd cybersec-website/frontend/' where you downloaded the projected
+  3. 1. **Install Dependencies**
+     2. Run the following command to install the required npm packages
+     3. `npm install`
+  4. 1. **Compile SCSS**
+     2. 
 
-Clone the project repository to your local machine.
 
-  2. **Navigate to the Project Folder**
-
-Move into the project directory where the frontend is stored
-
-  3. **Install Dependencies**
-
-Run the following command to install the required npm packages
 
   4. **Compile SCSS**
 
