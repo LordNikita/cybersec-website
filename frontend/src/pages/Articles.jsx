@@ -6,7 +6,7 @@ import cyberpunkImage from '../images/cyberpunk5.png';
 import rainGif from '../images/rain4.gif';
 import '../styles/Articles.css';
 
-// Article Components
+// Article Images
 import article1Image from '../images/article1.jpg';
 import article2Image from '../images/article2.jpg';
 import article3Image from '../images/article3.jpg';
@@ -18,18 +18,12 @@ import article8Image from '../images/article8.jpg';
 import article9Image from '../images/article9.jpg';
 import article10Image from '../images/article10.jpg';
 
-
-
-
-
+// Components
 import ArticleButton from '../components/ArticleButton.jsx';
 import PageButton from '../components/PageButton.jsx';
 
 // MUI Imports
-import { fontSize, padding, width } from '@mui/system';
-import { Avatar, Box, Link, Stack, Typography, useMediaQuery  } from '@mui/material';
-import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
-import ArrowBackIcon from '@mui/icons-material/ArrowBack';
+import { Box, Stack} from '@mui/material';
 
 // Background Image
 const backgroundImage = {
@@ -56,8 +50,8 @@ const ContentWrapperStyle = {
   height: '80vh',
   width: '70vw',
 
-  backgroundColor: 'rgba(205, 193, 255, 0.7)', // Adjust the last value for transparency
-  animation: 'backgroundWane 10s infinite',
+  // backgroundColor: 'rgba(205, 193, 255, 0.7)',
+  // animation: 'backgroundWane 10s infinite',
   color: '#444444',
 };
 
@@ -72,15 +66,12 @@ const ContentStyle = {
 
 const ArticleWrapper = {
   position: 'relative',
-
   width: '100%',
   minHeight: '150px',
   height: '16vh',
-
   marginTop: '1.75%',
   borderBottom: '1.5px solid #FFA500',
   
-
   backgroundColor: 'rgba(0, 0, 0, 0.5)',
 }
 
@@ -150,9 +141,9 @@ const ButtonContainerStyle = {
 
   bottom: '2.5%',
   height: '50px',
-
 };
 
+// This logic should be moved into the articles.json file
 const articles = [
   { id: 1, title: 'Phishing: Tactics Unveiled', image: article1Image, description: 'You received an email from your bank asking you to urgently verify your details, would you spot the red flags fast enough?', tags: ['Online Safety','Psychology', 'Scams', 'Social Engineering'] },
   { id: 2, title: 'Security & Romance', image: article2Image, description: 'Is your online "girlfriend" a real person? The answer might be rather complicated...', tags: ['Psychology', 'Scams', 'Social Engineering'] },
@@ -164,9 +155,7 @@ const articles = [
   { id: 8, title: 'IoT & Cybersecurity', image: article8Image, description: 'Is your Smart Fridge spying on you on behalf of the American Government? Discover how vulnerable IoT devices really are!', tags: ['Cybersecurity', 'Privacy', 'Technology'] },
   { id: 9, title: 'Ethical Hacking: An Intriguing Moral Dilemna', image: article9Image, description: 'The implications behind shows like Mr Robot are a lot more complex thank you think...', tags: ['Cybersecurity', 'Privacy'] },
   { id: 10, title: 'The Role of AI in Cybersecurity', image: article10Image, description: 'Is Artificial Intelligence just the next fad or does it signal something bigger for the field of cybersecurity?', tags: ['AI', 'Cybersecurity', 'Technology'] },
-
 ];
-
 
 const Articles = () => {
   const [currentPage, setCurrentPage] = React.useState(1);
@@ -178,8 +167,6 @@ const Articles = () => {
   const totalPages = Math.ceil(articles.length / articlesPerPage);
 
   const handleReadMore = (id) => {
-    console.log("SIGMAAA")
-    console.log(`/articles/${id}`)
     navigate(`/article/${id}`);
   };
   const nextPage = () => {

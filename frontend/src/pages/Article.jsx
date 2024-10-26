@@ -1,27 +1,41 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
-import articles from '../data/articles.json';
 import ReactMarkdown from 'react-markdown';
+import articles from '../data/articles.json';
 
-// Background Image
-import cyberpunkImage from '../images/cyberpunk6.jpg';
-import { letterSpacing } from '@mui/system';
+// Background Images
+import cyberpunkImage1 from '../images/cyberpunk6.jpg';
+import cyberpunkImage2 from '../images/cyberpunk2.jpg';
+import cyberpunkImage3 from '../images/cyberpunk8.jpg';
+import cyberpunkImage4 from '../images/cyberpunk4.jpg';
+import cyberpunkImage5 from '../images/cyberpunk20.jpg';
+import cyberpunkImage6 from '../images/cyberpunk21.jpg';
+import cyberpunkImage7 from '../images/cyberpunk22.jpg';
+//import cyberpunkImage8 from '../images/cyberpunk6.jpg';
 
-// Background Image
-const backgroundImage = {
-  backgroundImage: `url(${cyberpunkImage})`,
+const backgroundImageArray = [
+  cyberpunkImage1, 
+  cyberpunkImage2, 
+  cyberpunkImage3,
+  cyberpunkImage4, 
+  cyberpunkImage5, 
+  cyberpunkImage6,
+  cyberpunkImage7,
+];
+
+const ImageContainerStyle  = (currentBackgroundImage) => ({
+  position: 'fixed',
+  width: '100%',
+  // Height is tied to vh in parent element so cannot set it to %.
+  height: '100vh', 
+  zIndex: -1,
+
+  backgroundImage: `url(${currentBackgroundImage})`,
+  backgroundColor: '#4C3F91',
   backgroundSize: 'cover',
   backgroundRepeat: 'no-repeat',
   backgroundPosition: 'center',
-  backgroundColor: '#4C3F91',
-};
-const ImageContainer = {
-  position: 'fixed',
-  width: '100%',
-  height: '100vh',
-  ...backgroundImage,  
-  zIndex: -1,
-}
+});
 
 // Styles the Div which contains all the content on centre page
 const ContentWrapperStyle = {
@@ -55,11 +69,29 @@ const customImageStyle = {
   marginBottom: '2%',
   objectFit: 'contain',
 
-
-
   borderRadius: '10px',
   border: '2px solid #FFA500'
 };
+
+const headlineStyle = {
+  fontSize: '2.5rem',
+  fontWeight: 'bold',
+  marginTop: '4%',
+  marginBottom: '4%',
+
+  textTransform: 'uppercase',
+  letterSpacing: '0.1rem',
+
+  color: '#4C3F91',
+  
+};
+
+const SeparatorStyle = {
+  position: 'relative',
+  left: "calc(-2.65% + 2.5%)",
+  width: 'calc(106.4% - 7.5%)',
+  borderBottom: '2px solid rgba(76, 63, 145, 0.5)',
+}
 
 const Article = () => {
   const { id } = useParams();
@@ -70,12 +102,40 @@ const Article = () => {
   const formattedContent = article.content.join("\n");
   const formattedSources = article.sources.join("\n");
 
+  // State to track the current background image index
+  const [currentBackgroundIndex, setCurrentBackgroundIndex] = React.useState(() => {
+    const storedIndex = localStorage.getItem('currentBackgroundIndex');
+    return storedIndex === null ? -1 : parseInt(storedIndex);
+  });
+
+  // When component mounts we just set a random background image. We try not
+  // to show the same image twice in a row to the user but to avoid visual
+  // clutter we don't change the background image when the user is (spam)
+  // clicking the Random Article button.
+  React.useEffect(() => {
+    const changeBackgroundImage = () => {
+      let randomIndex = Math.floor(Math.random() * backgroundImageArray.length);
+
+      if (randomIndex === currentBackgroundIndex) {
+        randomIndex = (randomIndex + 1) % backgroundImageArray.length;
+      }
+
+      setCurrentBackgroundIndex(randomIndex);
+      localStorage.setItem('currentBackgroundIndex', randomIndex);
+    };
+
+    changeBackgroundImage();
+  }, []);
+
+  const currentBackgroundImage = backgroundImageArray[currentBackgroundIndex];
+
   return (
     <>
-      <div style={ImageContainer} />
+      <div style={ImageContainerStyle(currentBackgroundImage)} />
       <div style={ContentWrapperStyle}>
         <div style={ContentStyle}>
-          <h1>{article.title}</h1>
+          <h1 style={headlineStyle}>{article.title}</h1>
+          <div style={SeparatorStyle}></div>
           <ReactMarkdown components={{ img: ({node, ...props}) => <img style={customImageStyle} {...props} />}}>
             {formattedContent}
           </ReactMarkdown>

@@ -25,7 +25,6 @@ const App = () => {
     localStorage.setItem('isDarkMode', JSON.stringify(checked)); 
   };
 
-
 return (
   <>
   <BrowserRouter>

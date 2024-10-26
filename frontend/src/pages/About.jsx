@@ -28,9 +28,6 @@ const ContentWrapperStyle = {
   paddingBottom: '10px',
 
   backgroundColor: '#E5D9F2',
-  //backgroundColor: '#CDC1FF',
-  
-  //color: '#444444',
   color: '#333333',
 };
 
@@ -65,8 +62,6 @@ const contactStyle = {
   letterSpacing: '0.025rem',
 }
 
-//             This website has been designed and built by Nikita Ukladchikov for a 
-// UNSW course on Regulation of Cyber Security.
 const About = () => {
   return (
     <>
@@ -102,9 +97,9 @@ const About = () => {
           <br/>
           <br/>
           <br/>
-          <strong>All content on this website is the intellectual property of Nikita Ukladchikov. 
+          <strong>All content on this website is the intellectual property of Cyberhub. 
           Unauthorized use or reproduction of this material is strictly 
-          prohibited. © 2024 Nikita Ukladchikov. All rights reserved.</strong>
+          prohibited. © 2024 Cyberhub. All rights reserved.</strong>
 
           <br/>
           <br/>

@@ -1,11 +1,10 @@
 import React from 'react';
-import { Link as RouterLink, useLocation, useNavigate } from 'react-router-dom';
+import { Link as RouterLink, useLocation } from 'react-router-dom';
 import { getRandomArticleNumber } from '../utils/helpers.js'; 
 import GlitchTitle from './GlitchTitle.jsx';
 
 // Materials UI imports
-import { Avatar, Box, Link, Stack, Typography } from '@mui/material';
-import { fontFamily, fontWeight, letterSpacing } from '@mui/system';
+import { Box, Link, Stack, Typography } from '@mui/material';
 import { DarkModeSwitch } from 'react-toggle-dark-mode';
 
 const HeaderWrapperStyle = {
@@ -113,8 +112,8 @@ const Header = (props) => {
     const currentArticleNum = parseInt(location.pathname.split('/').pop());
     let articleNum;
     
-    // To improve UX experience, we ensure that a user clicking on the random
-    // article does not get redirected to the article he is already on
+    // To improve UX experience, we statistically ensure that a user clicking on the random
+    // article does not get redirected to the article he is already on.
     do {
       articleNum = getRandomArticleNumber(10);
     } while (articleNum === currentArticleNum); 
@@ -132,13 +131,12 @@ const Header = (props) => {
     left: '15%',
     height: '15vh',
     width: '70vw',
-    boxShadow: '0 2px 5px rgba(0, 0, 0, 0.5)',
-  
-
-    backgroundColor: isTagsPath ? 'transparent' : (isDarkMode ? '#1B1B1B' : '#4C3F91'),
 
     border: isTagsPath ? '0.5px solid white' : 'none',
     borderTop: 'none',
+    boxShadow: '0 2px 5px rgba(0, 0, 0, 0.5)',
+  
+    backgroundColor: isTagsPath ? 'transparent' : (isDarkMode ? '#1B1B1B' : '#4C3F91'),
   };  
 
   return (
@@ -201,12 +199,10 @@ const Header = (props) => {
               </Link>
             </RouterLink>
           </Box>
-
+          
         </Stack>
-
       </Box>
     </div> 
-
   );
 };
 

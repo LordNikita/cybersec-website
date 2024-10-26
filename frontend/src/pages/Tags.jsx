@@ -3,14 +3,10 @@ import { useNavigate } from 'react-router-dom';
 import '../styles/Tags.css';
 import articles from '../data/articles.json';
 
-// Background Image
-//import cyberpunkImage from '../images/cyberpunk9.jpg';
-
 const TagStyle = {
   position: 'absolute',
   top: '15%',
   left: '19.7%',
-  //left: '12.6%',
   width: '25%',
 
   textAlign: 'center',
@@ -18,7 +14,6 @@ const TagStyle = {
   fontSize: '1.4rem',
   fontFamily: 'Roboto, sans-serif',
   color: '#f0e9df',
-  //backgroundColor: 'rgba(255, 0, 0, 0.25)',
   textShadow: '0 0 5px rgba(0, 0, 0, 0.7), 0 0 15px rgba(255, 255, 255, 0.5)',
 };
 
@@ -32,9 +27,7 @@ const ArticleStyle = {
   lineHeight: '1.5rem',
   fontSize: '1.2rem',
   fontFamily: 'merriweather',
-  color: '#dfe1f0', 
-  //backgroundColor: 'rgba(255, 0, 0, 0.25)',
-  //textShadow: '0 0 5px rgba(255, 255, 255, 0.8), 0 0 10px rgba(255, 255, 255, 0.6)',
+  color: '#dfe1f0',
   textShadow: '0 0 7.5px rgba(255, 255, 255, 0.75)',
 };
 
@@ -59,7 +52,6 @@ const Tags = () => {
     <>
       <div className="big-woman" />
       <div className="big-woman-overlay" />
-
 
           <div style={TagStyle}>
             <h2 style={HeadingStyle}>✦ Select a Tag ✦</h2>
