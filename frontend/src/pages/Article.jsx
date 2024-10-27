@@ -11,6 +11,7 @@ import cyberpunkImage4 from '../images/cyberpunk4.jpg';
 import cyberpunkImage5 from '../images/cyberpunk20.jpg';
 import cyberpunkImage6 from '../images/cyberpunk21.jpg';
 import cyberpunkImage7 from '../images/cyberpunk22.jpg';
+import { textTransform } from '@mui/system';
 //import cyberpunkImage8 from '../images/cyberpunk6.jpg';
 
 const backgroundImageArray = [
@@ -45,7 +46,7 @@ const ContentWrapperStyle = {
 
   minHeight: '600px',
   width: '70vw',
-  paddingBottom: '25px',
+  paddingBottom: '35px',
 
   backgroundColor: '#CDC1FF',
   color: '#444444',
@@ -92,6 +93,27 @@ const SeparatorStyle = {
   width: 'calc(106.4% - 7.5%)',
   borderBottom: '2px solid rgba(76, 63, 145, 0.5)',
 }
+
+const TagTitleStyle = {
+  position: 'relative',
+  top: '10px',
+  marginRight: '8px', 
+
+  color: '#2C2C2C',
+  fontWeight: 'Bold',   
+  fontSize: '1.15rem',    
+  letterSpacing: '0.5px'
+};
+const TagStyle = {
+  position: 'relative',
+  top: '11px',
+  backgroundColor: '#4C3F91', 
+  color: '#ECEAF7     ', 
+  padding: '2px 8px', 
+  marginRight: '5px', 
+  borderRadius: '12px', 
+  fontSize: '0.975rem',
+};
 
 const Article = () => {
   const { id } = useParams();
@@ -140,7 +162,12 @@ const Article = () => {
             {formattedContent}
           </ReactMarkdown>
           <ReactMarkdown>{formattedSources}</ReactMarkdown>
-          <span> Article Tags: {article.tags.map(tag => `[${tag}]`).join(' ')} </span>
+          <span style={TagTitleStyle}>Article Tags: </span>
+          {article.tags.map((tag, index) => (
+            <span key={index} style={TagStyle}>
+              {tag}
+            </span>
+          ))}
 
         </div>
       </div>

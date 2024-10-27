@@ -115,12 +115,14 @@ const ArticleHeadingStyle = {
 };
 const ArticleBodyStyle = {
   width: '70%',
-  borderRight: '1px solid gold',
+  // Good for bug fixing where the width ends
+  //borderRight: '1px solid gold',
 
   letterSpacing: '0.005rem',
   fontSize: '1.05rem'
 };
-const ArticleTagStyle = {
+
+const TagWrapperStyle = {
   position: 'absolute',
   top: '79%',
 
@@ -128,6 +130,15 @@ const ArticleTagStyle = {
   fontSize: '0.925rem',
   fontFamily: 'Roboto, sans-serif',
 };
+const TagStyle = {
+  backgroundColor: '#4C3F91', 
+  color: '#ECEAF7     ', 
+  padding: '2px 8px', 
+  marginRight: '5px', 
+  borderRadius: '12px', 
+  fontSize: '0.85rem',
+};
+
 const ArticleButtonWrapper = {
   position: 'absolute',
   top: '50%',
@@ -146,14 +157,14 @@ const ButtonContainerStyle = {
 // This logic should be moved into the articles.json file
 const articles = [
   { id: 1, title: 'Phishing: Tactics Unveiled', image: article1Image, description: 'You received an email from your bank asking you to urgently verify your details, would you spot the red flags fast enough?', tags: ['Online Safety','Psychology', 'Scams', 'Social Engineering'] },
-  { id: 2, title: 'Security & Romance', image: article2Image, description: 'Is your online "girlfriend" a real person? The answer might be rather complicated...', tags: ['Psychology', 'Scams', 'Social Engineering'] },
-  { id: 3, title: 'Understanding Malware: Beyond the Basics', image: article3Image, description: 'Every 4 minutes, a company falls victim to a malware attack, read this article and stop yourself from being just another statistic.', tags: ['Online Safety', 'Cybersecurity', 'Privacy', 'Scams'] },
+  { id: 2, title: 'Security & Romance', image: article2Image, description: 'Is your online "girlfriend" a real person? The answer might be rather complicated...', tags: ['Online Safety', 'Psychology', 'Scams', 'Social Engineering'] },
+  { id: 3, title: 'Understanding Malware: Beyond the Basics', image: article3Image, description: 'Every 4 minutes, a company falls victim to a malware attack, read this article and stop yourself from being just another statistic.', tags: ['Online Safety', 'Cybersecurity', 'Scams', 'Technology'] },
   { id: 4, title: 'Hacked in Transit', image: article4Image, description: 'When secure communications are anything but — the mechanics of MITM attacks and what makes them so dangerously effective.', tags: ['Online Safety', 'Cybersecurity', 'Privacy'] },
-  { id: 5, title: 'Zero Trust Architechture', image: article5Image, description: 'Why trusting no one and nothing might just be your only option in 2024...', tags: ['Cybersecurity', 'Privacy'] },
+  { id: 5, title: 'Zero Trust Architechture', image: article5Image, description: 'Why trusting no one and nothing might just be your only option in 2024...', tags: ['Cybersecurity', 'Technology'] },
   { id: 6, title: 'The Psychology Behind Passwords', image: article6Image, description: 'Ever wonder why people choose terrible passwords and the consequences of doing so?', tags: ['Cybersecurity', 'Online Safety', 'Psychology'] },
-  { id: 7, title: 'Cyber Warfare: Chaos or Opportunity?', image: article7Image, description: 'War has evolved constantly over thousands of years, it\'s only natural this process continues into the digital age... ', tags: ['Cybersecurity', 'Privacy'] },
+  { id: 7, title: 'Cyber Warfare: Chaos or Opportunity?', image: article7Image, description: 'War has evolved constantly over thousands of years, it\'s only natural this process continues into the digital age... ', tags: ['Cybersecurity', 'Technology'] },
   { id: 8, title: 'IoT & Cybersecurity', image: article8Image, description: 'Is your Smart Fridge spying on you on behalf of the American Government? Discover how vulnerable IoT devices really are!', tags: ['Cybersecurity', 'Privacy', 'Technology'] },
-  { id: 9, title: 'Ethical Hacking: An Intriguing Moral Dilemna', image: article9Image, description: 'The implications behind shows like Mr Robot are a lot more complex thank you think...', tags: ['Cybersecurity', 'Privacy'] },
+  { id: 9, title: 'Ethical Hacking: An Intriguing Moral Dilemna', image: article9Image, description: 'The implications behind shows like Mr Robot are a lot more complex thank you think...', tags: ['Cybersecurity'] },
   { id: 10, title: 'The Role of AI in Cybersecurity', image: article10Image, description: 'Is Artificial Intelligence just the next fad or does it signal something bigger for the field of cybersecurity?', tags: ['AI', 'Cybersecurity', 'Technology'] },
 ];
 
@@ -195,8 +206,10 @@ const Articles = () => {
                 <Box sx={ArticleContentWrapper}>
                   <h2 style={ArticleHeadingStyle}>{article.title}</h2>
                   <p style={ArticleBodyStyle}>{article.description}</p>
-                  <span style={ArticleTagStyle}>
-                    Tags: {article.tags.map(tag => `[${tag}]`).join(' ')}
+                  <span style={TagWrapperStyle}>
+                    Tags: {article.tags.map(tag => (
+                      <span key={tag} style={TagStyle}>{tag}</span>
+                    ))}
                   </span>
                 </Box>
 
