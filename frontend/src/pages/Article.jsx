@@ -43,7 +43,7 @@ const ContentWrapperStyle = {
   top: '15vh',
   left: '15%',
 
-  //height: '2200px',
+  minHeight: '600px',
   width: '70vw',
   paddingBottom: '25px',
 
@@ -76,14 +76,14 @@ const customImageStyle = {
 const headlineStyle = {
   fontSize: '2.5rem',
   fontWeight: 'bold',
-  marginTop: '4%',
-  marginBottom: '4%',
+  marginTop: '3%',
+  marginBottom: '3%',
 
   textTransform: 'uppercase',
   letterSpacing: '0.1rem',
+  lineHeight: '1.1',
 
   color: '#4C3F91',
-  
 };
 
 const SeparatorStyle = {
