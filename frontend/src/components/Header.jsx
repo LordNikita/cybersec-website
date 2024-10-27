@@ -94,7 +94,7 @@ const LinkStyle = {
 
 const DarkModeWrapper = {
   position: 'absolute',
-  right: '2%',
+  right: '3%',
   top: '24%',
 
 };
@@ -199,7 +199,7 @@ const Header = (props) => {
               </Link>
             </RouterLink>
           </Box>
-          
+
         </Stack>
       </Box>
     </div> 

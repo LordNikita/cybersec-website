@@ -75,7 +75,7 @@
       "* [Cyber.gov.au - Phishing](https://www.cyber.gov.au/threats/types-threats/phishing)",
       "* [UpGuard - Types of Phishing Attacks](https://www.upguard.com/blog/types-of-phishing-attacks)"
     ],
-    "tags": ["Psychology", "Scam", "Social Engineering"]
+    "tags": ["Online Safety", "Psychology", "Scam", "Social Engineering"]
   },
   {
     "id": 2,
@@ -144,7 +144,7 @@
       "* [Scamwatch - Online Dating and Romance Scams](https://www.scamwatch.gov.au/types-of-scams/online-dating-and-romance-scams)",
       "* [Scamwatch - Scam Statistics](https://www.scamwatch.gov.au/research-and-resources/scam-statistics)"
     ],    
-    "tags": ["Psychology", "Scam", "Social Engineering"]
+    "tags": ["Online Safety", "Psychology", "Scam", "Social Engineering"]
   },
   {
     "id": 3,
@@ -159,7 +159,7 @@
     "sources": [
       ""
     ],     
-    "tags": ["Online Safety", "Cybersecurity", "Privacy", "Scam"]
+    "tags": ["Online Safety", "Cybersecurity", "Scam", "Technology"]
   },
   {
     "id": 4,
@@ -321,7 +321,7 @@
       "* [What is a Zero Trust Architecture](https://www.paloaltonetworks.com.au/cyberpedia/what-is-a-zero-trust-architecture)",
       "* [Zero Trust security | What is a Zero Trust network?](https://www.cloudflare.com/en-au/learning/security/glossary/what-is-zero-trust/)"
     ],    
-    "tags": ["Cybersecurity", "Privacy"]
+    "tags": ["Cybersecurity", "Technology"]
   },
   {
     "id": 6,
@@ -544,7 +544,7 @@
       "## Further Reading",
       "* [Cyber Warfare](https://www.imperva.com/learn/application-security/cyber-warfare/)"
     ],    
-    "tags": ["Cybersecurity", "Privacy"]
+    "tags": ["Cybersecurity", "Technology"]
   },
   {
     "id": 8,
@@ -740,7 +740,7 @@
       "* [What is Ethical Hacking](https://www.eccouncil.org/cybersecurity-exchange/ethical-hacking/what-is-ethical-hacking/)",
       "* Ethics in Cybersecurity Research and Practice - Technology in Society Volume 63 (November 2020, 101382)"
     ],    
-    "tags": ["Cybersecurity", "Privacy"]
+    "tags": ["Cybersecurity"]
   },
   {
     "id": 10,

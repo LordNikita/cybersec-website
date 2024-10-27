@@ -3,18 +3,34 @@ import { useNavigate } from 'react-router-dom';
 import '../styles/Tags.css';
 import articles from '../data/articles.json';
 
+// MUI
+import { Box, Typography } from '@mui/material';
+
+
 const TagStyle = {
   position: 'absolute',
   top: '15%',
   left: '19.7%',
   width: '25%',
 
-  textAlign: 'center',
   lineHeight: '1.65rem',
-  fontSize: '1.4rem',
+  textAlign: 'center',
   fontFamily: 'Roboto, sans-serif',
   color: '#f0e9df',
   textShadow: '0 0 5px rgba(0, 0, 0, 0.7), 0 0 15px rgba(255, 255, 255, 0.5)',
+};
+const InnerTagStyle = {
+  position: 'relative',
+  top: '-10px',
+  lineHeight: '3.3rem',
+  fontSize: '1.5rem',
+
+  cursor: 'pointer',
+  transition: 'text-shadow 0.3s, color 0.3s',
+  '&:hover': {
+    textShadow: '0 0 10px rgba(255, 255, 255, 1), 0 0 20px rgba(0, 255, 255, 1)',
+    color: '#00FFFF', 
+  },
 };
 
 const ArticleStyle = {
@@ -29,6 +45,20 @@ const ArticleStyle = {
   fontFamily: 'merriweather',
   color: '#dfe1f0',
   textShadow: '0 0 7.5px rgba(255, 255, 255, 0.75)',
+};
+const InnerArticleStyle = {
+  position: 'relative',
+  top: '-10px',
+  lineHeight: '2.98rem',
+  fontSize: '1.2rem',
+  fontFamily: 'merriweather',
+
+  cursor: 'pointer',
+  transition: 'text-shadow 0.3s, color 0.3s',
+  '&:hover': {
+    textShadow: '0 0 10px rgba(255, 255, 255, 1), 0 0 20px rgba(0, 255, 255, 1)',
+    color: '#00FFFF', 
+  },
 };
 
 const HeadingStyle = {
@@ -57,7 +87,7 @@ const Tags = () => {
             <h2 style={HeadingStyle}>✦ Select a Tag ✦</h2>
             <div>
               {allTags.map(tag => (
-                <p key={tag} onClick={() => handleTagClick(tag)} style={{ cursor: 'pointer' }}>{tag}</p>
+                <Typography key={tag} onClick={() => handleTagClick(tag)} sx={InnerTagStyle}>{tag}</Typography>
               ))}
             </div>
           </div>
@@ -66,9 +96,9 @@ const Tags = () => {
           <div style = {ArticleStyle}>
             <h2>★ {selectedTag || 'All'}  Articles ★</h2>
             {filteredArticles.map(article => (
-              <div key={article.id} onClick={() => navigate(`/article/${article.id}`)} style={{ cursor: 'pointer' }}>
-                <p>{article.title}</p>
-              </div>
+              <Typography key={article.id} onClick={() => navigate(`/article/${article.id}`)} sx={InnerArticleStyle}>
+                {article.title}
+              </Typography>
             ))}
           </div>
     </>
