@@ -34,7 +34,7 @@ const backgroundImage = {
   backgroundColor: '#4C3F91',
 };
 const ImageContainer = {
-  position: 'absolute',
+  position: 'fixed',
   width: '100vw',
   height: '100vh',
   ...backgroundImage,  

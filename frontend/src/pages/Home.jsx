@@ -12,9 +12,9 @@ const backgroundImage = {
   backgroundColor: '#4C3F91',
 };
 const ImageContainer = {
-  position: 'absolute',
+  position: 'fixed',
   width: '100%',
-  height: '100%',
+  height: '100vh',
   ...backgroundImage,  
   zIndex: -1,
 }
