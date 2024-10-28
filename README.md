@@ -1,6 +1,6 @@
 # Cyberhub website
 
-Cyberhub was designed and built by Nikita Ukladchikov for UNSW Course LAWS3040 (Regulation of Cyber Security) in 2024 Term 3. All software-based rights reserved.
+Cyberhub was designed and built by Nikita Ukladchikov for UNSW Course LAWS3040 (Regulation of Cyber Security) in 2024 Term 3. All software-based rights reserved except where explicitly stated.
 
 ## How to Run the Project
 
@@ -10,8 +10,9 @@ To set up and run **CyberHub** locally, follow these steps:
 Make sure you have the following installed on your system:
 - Node.js
 - NPM (Node Package Manager)
+- Git Developer Tools
 
-### Steps to Run the Project (on Mac)
+### Steps to Run the Project (tested on Mac)
 
   1. 1. **Clone the Repository**
      2. Type `git clone <repository-url>` in your preferred terminal
