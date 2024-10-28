@@ -1,6 +1,6 @@
-# Cyberhub website
+![image](https://github.com/user-attachments/assets/a3909a2a-5038-4cf8-9f9d-6cda2fcd4262)# Cyberhub website
 
-Cyberhub was designed and built by Nikita Ukladchikov for UNSW Course LAWS3040 (Regulation of Cyber Security) in 2024 Term 3. All software-based rights reserved except where explicitly stated.
+Cyberhub was designed and built by Nikita Ukladchikov for UNSW Course LAWS3040 (Regulation of Cyber Security) in 2024 Term 3. All software-based rights reserved except where explicitly stated otherwise.
 
 ## How to Run the Project
 
@@ -15,7 +15,7 @@ Make sure you have the following installed on your system:
 ### Steps to Run the Project (tested on Mac)
 
   1. 1. **Clone the Repository**
-     2. Type `git clone <repository-url>` in your preferred terminal
+     2. Type `git clone https://github.com/LordNikita/cybersec-website.git` in your preferred terminal
   2. 1. **Navigate to the Project Folder**
      2. Move into the project directory where the frontend is stored:
      3. E.g., type `cd cybersec-website/frontend/` where you have downloadeded the project
