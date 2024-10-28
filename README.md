@@ -12,7 +12,9 @@ Make sure you have the following installed on your system:
 - NPM (Node Package Manager)
 - Git Developer Tools
 
-### Steps to Run the Project (tested on Mac)
+**Side note:** I would provide instructions on how to install the prerequisites above but it depends a lot on what operating system you use so to avoid confusion you are encouraged to do this step yourself.
+
+### Steps to Run the Project (Tested on both Mac & Windows)
 
   1. 1. **Clone the Repository**
      2. Type `git clone https://github.com/LordNikita/cybersec-website.git` in your preferred terminal
