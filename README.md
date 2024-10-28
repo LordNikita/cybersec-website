@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/a3909a2a-5038-4cf8-9f9d-6cda2fcd4262)# Cyberhub website
+# Cyberhub website
 
 Cyberhub was designed and built by Nikita Ukladchikov for UNSW Course LAWS3040 (Regulation of Cyber Security) in 2024 Term 3. All software-based rights reserved except where explicitly stated otherwise.
 
