@@ -20,7 +20,7 @@ Make sure you have the following installed on your system:
      2. Type `git clone https://github.com/LordNikita/cybersec-website.git` in your preferred terminal
   2. 1. **Navigate to the Project Folder**
      2. Move into the project directory where the frontend is stored:
-     3. E.g., type `cd cybersec-website/frontend/` where you have downloadeded the project
+     3. E.g., type `cd cybersec-website/frontend/` where you have downloaded the project
   3. 1. **Install Dependencies**
      2. Run the following command to install the required npm packages:
      3. `npm install`
